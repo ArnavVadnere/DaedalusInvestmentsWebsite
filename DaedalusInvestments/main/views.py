@@ -5,3 +5,9 @@ from django.http import HttpResponse
 
 def home(response):
     return render(response, "main/home.html")
+
+def aboutus(response):
+    return render(response, "main/aboutus.html")
+
+def investmentstrategy(response):
+    return render(response, "main/investmentstrategy.html")
