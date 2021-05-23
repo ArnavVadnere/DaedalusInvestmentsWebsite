@@ -1,5 +1,16 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block content %}
+<div class="strat">
 <p>First, we will speak to our clients to see if they have any specific values or other criteria that may need to be met while choosing stocks, we will assess their risk tolerance and establish a stop-loss level for the whole account. From here, stocks that have dipped their 52-week high are narrowed while further performing some initial screening processes to determine a small basket of stocks. This basket is fed into our original algorithm that accounts sentiment in combination with heavy stochastic indicators to extrapolate the price of a security in the future. By training the model on a data set, and modifying it depending on today’s sentiment gathered from multiple sources (Twitter, StockTwits, r/wallstreetbets), an accurate representation of the stock’s future prospects can be seen. From here, heavy fundamental analysis is conducted to assess the companies’ financial strength, profitability metrics, and price valuation. As a last step, technical analysis is conducted to determine a good entry and exit point for the stock. </p>
+</div>
+{% endblock%}
+
+{% block video %}
+    <video src="{% static 'videos/river_night.mp4'%}" muted loop autoplay></video>
+{% endblock%}
+
+{% block videoname %}
+INVESTMENT STRATEGY
 {% endblock%}

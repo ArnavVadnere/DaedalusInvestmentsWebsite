@@ -1,5 +1,52 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
-{% block content %}
-<!-- <h1>Hello there</h1> -->
+{% block main %}
+<div class="assets_under">
+    
+    <span class="timer"></span>
+  
+    <p>Assets Under Management</p>
+    
+</div>
+
+
+
 {% endblock%}
+
+{% block video %}
+    <video src="{% static 'videos/6_02_09_19.mp4'%}" muted loop autoplay></video>
+{% endblock%}
+
+{% block videoname %}
+<h1>DAEDALUS 
+    INVESTMENTS</h1>
+
+{% endblock%}
+
+{% block content1%}
+<div class="col-md-4 ">
+    <div class="card text-xs-center">
+        <img src="{% static 'images/strat.jpg'%}" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Investment Strategy</h5>
+            <p>Get a comprehensive look into our process</p>
+            <a href="#">CHECK GYM</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content2%}
+<div class="col-md-4">
+    <div class="card text-center">
+        <img src="{% static 'images/education.jpg'%}" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Education</h5>
+            <p>Arm yourself with the tools to navigate the muddy waters of the financial markets</p>
+            <a href="#">CHECK GYM</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

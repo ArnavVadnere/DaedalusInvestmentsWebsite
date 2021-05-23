@@ -1,6 +1,8 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block content %}
+<div class="aboutuspage">
 <h2>Our mission - “Giving Wings to Your Money”</h2>
 <p>The story of Daedalus and Icarus is a classic tale of greed, folly, and unbridled spirit. Daedalus and Icarus were father and son, trapped on an island prison for angering King Minos, the ruler of the Greek island Crete. Daedalus, a brilliant inventor, created wings out of wax for himself and his son. Most people recognize this story because Icarus decided to fly too close to the sun, which melted the wax off his wings and ultimately brought his demise. However, we want to honor the story of Daedalus, a man whose shrewd decision-making ultimately allowed him to reach his end goals. By associating Daedalus to our name, we make sure that our investments are at the perfect balance of risk, to ensure that our wings aren’t dampened by seawater nor are they melted by the sun. By not flying too close to the sun or water, we hope our investments will take flight, and give us the best rate of return we can generate.</p>
 
@@ -12,5 +14,20 @@
 <p>Transparency: We wish to have open conversations with clients about the plan of action we wish to take along with keeping them in the loop on any major decisions as it pertains to asset management. </p>
 
 <p> Ethical Investing: We wish to comprise any portfolio with companies creating positive impacts on society, rather than ones that profit off of individuals in an immoral way. </p>
-    
+</div>
+
+<div class="aboutusvidoename">
+    <strong data-shrink-original-size="68" style="letter-spacing: 0.0588235em;" id="yui_3_17_2_1_1621050304850_139">
+        WHAT WE DO
+    </strong>
+</div>
+
 {% endblock%}
+
+
+
+{% block video %}
+    <video src="{% static 'videos/harbor_bridge_night_2.mp4'%}" muted loop autoplay></video>
+{% endblock%}
+
+

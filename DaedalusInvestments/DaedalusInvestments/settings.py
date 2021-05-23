@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main'
+    'main',
+    'embed_video',
+    
 ]
 
 MIDDLEWARE = [
@@ -123,6 +125,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'assets'),
+    "D:\Coding\DaedalusInvestmentsWebsite\DaedalusInvestments\main\static",
+    "D:\Coding\DaedalusInvestmentsWebsite\DaedalusInvestments\main\static\js",
     )
 
 # Default primary key field type
