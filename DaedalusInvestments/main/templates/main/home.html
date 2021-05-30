@@ -3,9 +3,8 @@
 
 {% block main %}
 <div class="assets_under">
-    
-    <span class="timer"></span>
-  
+    <img class="assets_under_img" src="{% static 'images/hand.png'%}" alt="Assets Under Managment Image">
+    <h3><span class="timer"></span></h3>
     <p>Assets Under Management</p>
     
 </div>
@@ -19,33 +18,55 @@
 {% endblock%}
 
 {% block videoname %}
-<h1>DAEDALUS 
+<h1 class="videoname">DAEDALUS 
     INVESTMENTS</h1>
 
 {% endblock%}
 
+
+{% block about1 %}
+<div class="abouttext">
+  <h3>ABOUT US</h3>
+  <p>Daedalus Investments Co. is a portfolio management entity that offers personalized asset management and portfolio consultation to all clients and offers complete and thorough transparency. From portfolio allocation to equity valuation, our comprehensive strategy is streamlined, efficient, and creates sustainable growth in capital markets. </p>
+  <a href='/aboutus' class='button' title='Yes, turtles.' >About us</a>
+</div>
+{% endblock%}
+
+
+
+{% block about2 %}
+<img class="blackimage" src="{% static 'images/tempimage.jpg'%}" alt="black image">
+
+{% endblock%}
+
 {% block content1%}
-<div class="col-md-4 ">
-    <div class="card text-xs-center">
-        <img src="{% static 'images/strat.jpg'%}" class="card-img-top">
-        <div class="card-body">
-            <h5 class="card-title">Investment Strategy</h5>
-            <p>Get a comprehensive look into our process</p>
-            <a href="#">CHECK GYM</a>
+<div class="card1" >
+  <div class="grid__item" style="float:right;">
+      <div class="card"><img class="card__img" src="{% static 'images/strat.jpg'%}" alt="Snowy Mountains">
+        <div class="card__content">
+          <h1 class="card__header">Investment Strategy</h1>
+          <p class="card__text">Get a comprehensive look into our investment process </p>
+          <div style="float:bottom;">
+            <button class="card__btn" style="float:bottom;"><a href="/investmentstrategy"  style="text-decoration: none" color="#3363ff">Explore Investment Strategy</a><span>&rarr;</span></button>
+          </div>
         </div>
+      </div>
     </div>
 </div>
 {% endblock %}
 
 {% block content2%}
-<div class="col-md-4">
-    <div class="card text-center">
-        <img src="{% static 'images/education.jpg'%}" class="card-img-top">
-        <div class="card-body">
-            <h5 class="card-title">Education</h5>
-            <p>Arm yourself with the tools to navigate the muddy waters of the financial markets</p>
-            <a href="#">CHECK GYM</a>
+<div class="card2">
+  <div class="grid__item">
+      <div class="card"><img class="card__img" src="{% static 'images/education.jpg'%}" alt="Snowy Mountains">
+        <div class="card__content">
+          <h1 class="card__header">Education</h1>
+          <p class="card__text">ARM YOURSELF WITH THE TOOLS TO NAVIGATE THE FINANCIAL MARKETS</p>
+          
+          <button class="card__btn" ><a href="/education"  style="text-decoration: none" color="#3363ff">Explore Education</a><span>&rarr;</span></button>
+        
         </div>
+      </div>
     </div>
 </div>
 {% endblock %}
