@@ -1,58 +1,36 @@
-(function($) {
-    $.fn.countTo = function(options) {
-        // merge the default plugin settings with the custom options
-        options = $.extend({}, $.fn.countTo.defaults, options || {});
-
-        // how many times to update the value, and how much to increment the value on each update
-        var loops = Math.ceil(options.speed / options.refreshInterval),
-            increment = (options.to - options.from) / loops;
-
-        return $(this).each(function() {
-            var _this = this,
-                loopCount = 0,
-                value = options.from,
-                interval = setInterval(updateTimer, options.refreshInterval);
-
-            function updateTimer() {
-                value += increment;
-                loopCount++;
-                $(_this).html(value.toFixed(options.decimals));
-
-                if (typeof(options.onUpdate) == 'function') {
-                    options.onUpdate.call(_this, value);
-                }
-
-                if (loopCount >= loops) {
-                    clearInterval(interval);
-                    value = options.to;
-
-                    if (typeof(options.onComplete) == 'function') {
-                        options.onComplete.call(_this, value);
-                    }
-                }
-            }
-        });
+// inViewport jQuery plugin
+// https://stackoverflow.com/a/26831113/383904
+$(function($, win) {
+    $.fn.inViewport = function(cb) {
+      return this.each(function(i,el){
+        function visPx(){
+          var H = $(this).height(),
+              r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+          return cb.call(el, Math.max(0, t>0? H-t : (b<H?b:H)));  
+        } visPx();
+        $(win).on("resize scroll", visPx);
+      });
     };
-
-    $.fn.countTo.defaults = {
-        from: 0,  // the number the element should start at
-        to: 100,  // the number the element should end at
-        speed: 50,  // how long it should take to count between the target numbers
-        refreshInterval: 50,  // how often the element should be updated
-        decimals: 0,  // the number of decimal places to show
-        onUpdate: null,  // callback method for every time the element is updated,
-        onComplete: null,  // callback method for when the element finishes updating
-    };
-})(jQuery);
-
-jQuery(function($) {
-        $('.timer').countTo({
-            from: 0,
-            to: 300000,
-            speed: 2500,
-            refreshInterval: 50,
-            onComplete: function(value) {
-                console.debug(this);
-            }
-        });
+  }(jQuery, window));
+  
+  
+  jQuery(function($) { // DOM ready and $ in scope
+  
+    $(".fig-number").inViewport(function(px) { // Make use of the `px` argument!!!
+      // if element entered V.port ( px>0 ) and
+      // if prop initNumAnim flag is not yet set
+      //  = Animate numbers
+      if(px>0 && !this.initNumAnim) { 
+        this.initNumAnim = true; // Set flag to true to prevent re-running the same animation
+        $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+        }, {
+          duration: 1500,
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          }
+        });         
+      }
     });
+  
+  });
