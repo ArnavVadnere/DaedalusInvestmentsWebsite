@@ -1,16 +1,67 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block content %}
-<div class="strat">
-<p>First, we will speak to our clients to see if they have any specific values or other criteria that may need to be met while choosing stocks, we will assess their risk tolerance and establish a stop-loss level for the whole account. From here, stocks that have dipped their 52-week high are narrowed while further performing some initial screening processes to determine a small basket of stocks. This basket is fed into our original algorithm that accounts sentiment in combination with heavy stochastic indicators to extrapolate the price of a security in the future. By training the model on a data set, and modifying it depending on today’s sentiment gathered from multiple sources (Twitter, StockTwits, r/wallstreetbets), an accurate representation of the stock’s future prospects can be seen. From here, heavy fundamental analysis is conducted to assess the companies’ financial strength, profitability metrics, and price valuation. As a last step, technical analysis is conducted to determine a good entry and exit point for the stock. </p>
-</div>
-{% endblock%}
 
 {% block video %}
-<video src="{% static 'videos/homepage.mp4'%}" muted loop autoplay></video>
+<video src="{% static 'videos/investmentstrat.mp4'%}" muted loop autoplay></video>
 {% endblock%}
 
 {% block videoname %}
 <h1>INVESTMENT STRATEGY</h1>
 {% endblock%}
+
+{% block main %}
+<div class="strat">
+    <h1>Planning</h1>
+    <p>First, we will speak to our clients to see if they have any specific values or other criteria that may need to be met while choosing stocks, we will assess their risk tolerance and establish a stop-loss level for the whole account. From here, stocks that have dipped their 52-week high are narrowed while further performing some initial screening processes to determine a small basket of stocks. This basket is fed into our original algorithm that accounts sentiment in combination with heavy stochastic indicators to extrapolate the price of a security in the future. By training the model on a data set, and modifying it depending on today’s sentiment gathered from multiple sources (Twitter, StockTwits, r/wallstreetbets), an accurate representation of the stock’s future prospects can be seen. From here, heavy fundamental analysis is conducted to assess the companies’ financial strength, profitability metrics, and price valuation. As a last step, technical analysis is conducted to determine a good entry and exit point for the stock. </p>
+</div>
+
+<div class="cardheading">
+    <h1>Learn More</h1>
+</div>
+
+{% endblock%}
+
+{% block content1 %}
+<div class="wrap1"> 
+<div class="wrap"> 
+    
+    <div class="tile"> 
+        <a href="{% static 'pdf/Paper.pdf'%}" class="text-reset" target="_blank">
+        <img src="{% static 'images/stratcard.jpg'%}">
+        <div class="text">
+        <h1>In-depth Investment Strategy</h1>
+        <h2 class="animate-text">Click here to view our investment strategy</h2>
+      <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+    </a>
+       </div>   
+    </div>  
+    </div>
+{% endblock %}
+
+{% block content2 %}
+<div class="wrap2" >
+<div class="wrap">  
+    
+    <div class="tile"> 
+        <a href="{% static 'pdf/Daedalus_Capital_Plan_Client_Report_1.pdf'%}" class="text-reset" target="_blank">
+        <img src="{% static 'images/client.jpg'%}">
+        <div class="text">
+        <h1>Client Report</h1>
+        <h2 class="animate-text">Click here to view our client report</h2>
+      <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+       </div>  
+    </div> 
+    </a>  
+    </div>
+{% endblock %}

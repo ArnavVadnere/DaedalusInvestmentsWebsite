@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
 
-*.body {
+* {
   padding: 0px;
+  /* overflow: hidden */
+  line-height: 1.6;
 }
 /* .back{
   position: absolute;
@@ -162,6 +164,10 @@ footer{
  *, html {
   padding:0;  
 }
+body {
+  font-family: "Inter", sans-serif;
+}
+
 .selector-for-some-widget {
   box-sizing: content-box;
 }
@@ -170,10 +176,7 @@ footer{
   --main-padding: 5px;
 }
 
-body {
-  font-family: "Inter", sans-serif;
 
-}
 
 .container {
   margin: 0;
@@ -182,7 +185,7 @@ body {
   /* height: 200; */
   grid-template-columns: 1fr 1fr;
   /* grid-template-rows: 1fr 0r 2.1fr 1.5fr 1fr .5fr; */
-  grid-template-rows: 800px 460px 400px 450px 500px 300px;
+  grid-template-rows: 800px 460px 460px 460px 600px 300px;
   grid-template-areas:
     "video video"
     "about1 about2"

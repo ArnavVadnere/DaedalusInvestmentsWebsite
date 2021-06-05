@@ -1,21 +1,7 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block content %}
-<div class="aboutuspage">
-<h2>Our mission - “Giving Wings to Your Money”</h2>
-<p>The story of Daedalus and Icarus is a classic tale of greed, folly, and unbridled spirit. Daedalus and Icarus were father and son, trapped on an island prison for angering King Minos, the ruler of the Greek island Crete. Daedalus, a brilliant inventor, created wings out of wax for himself and his son. Most people recognize this story because Icarus decided to fly too close to the sun, which melted the wax off his wings and ultimately brought his demise. However, we want to honor the story of Daedalus, a man whose shrewd decision-making ultimately allowed him to reach his end goals. By associating Daedalus to our name, we make sure that our investments are at the perfect balance of risk, to ensure that our wings aren’t dampened by seawater nor are they melted by the sun. By not flying too close to the sun or water, we hope our investments will take flight, and give us the best rate of return we can generate.</p>
 
-<h2>Core Values</h2>
-<p>Independence: Without direct links to any unaffiliated outside group, we eliminate institutionalized conflicts of interest and pressures.</p>
-
-<p>Client Focus: We understand each client is different and believe in personalization for each one. We believe in a long-term approach and we believe in accommodating each client’s specific goals and needs. </p>
-
-<p>Transparency: We wish to have open conversations with clients about the plan of action we wish to take along with keeping them in the loop on any major decisions as it pertains to asset management. </p>
-
-<p> Ethical Investing: We wish to comprise any portfolio with companies creating positive impacts on society, rather than ones that profit off of individuals in an immoral way. </p>
-</div>
-{% endblock%}
 
 {% block videoname %}
 <h1>What We Do</h1>
@@ -24,7 +10,88 @@
 
 
 {% block video %}
-<video src="{% static 'videos/aboutus.mp4'%}" muted loop autoplay></video>
+<video src="{% static 'videos/homepage.mp4'%}" muted loop autoplay></video>
 {% endblock%}
 
 
+{% block about1 %}
+    <img class="about1img" src="{% static 'images/newimage.jpg'%}">
+{% endblock%}
+
+{% block about2 %}
+<div class="about2info">
+    <h1><strong>What We Do</strong></h1>
+    <p><strong>Capricorn is an owner-managed investment business focused on private equity.</strong></p>
+    <p>In 2017, our record of successful investments attracted a well-respected strategic shareholder in the Ellerine Group. Capricorn has acquired and advised on the acquisition of shares in a diverse portfolio of both private and public companies, contributing to a highly lauded investment track record.</p>
+    <p>Capricorn has played a key role in establishing and growing numerous businesses through our investments in asset management, lending, insurance, retail and industrial investment holding companies. We have strategically narrowed our focus to the financial services sector in recent years.</p>
+</div>
+    {% endblock%}
+
+{% block main %}
+<!-- <div class="aboutuspage">
+    <div class="mission">
+        <h2>Our mission - “Giving Wings to Your Money”</h2>
+        <p>The story of Daedalus and Icarus is a classic tale of greed, folly, and unbridled spirit. Daedalus and Icarus were father and son, trapped on an island prison for angering King Minos, the ruler of the Greek island Crete. Daedalus, a brilliant inventor, created wings out of wax for himself and his son. Most people recognize this story because Icarus decided to fly too close to the sun, which melted the wax off his wings and ultimately brought his demise. However, we want to honor the story of Daedalus, a man whose shrewd decision-making ultimately allowed him to reach his end goals. By associating Daedalus to our name, we make sure that our investments are at the perfect balance of risk, to ensure that our wings aren’t dampened by seawater nor are they melted by the sun. By not flying too close to the sun or water, we hope our investments will take flight, and give us the best rate of return we can generate.</p>
+    </div>
+
+    <div class="core">
+        <h2>Core Values</h2>
+        <p>Independence: Without direct links to any unaffiliated outside group, we eliminate institutionalized conflicts of interest and pressures.</p>
+
+        <p>Client Focus: We understand each client is different and believe in personalization for each one. We believe in a long-term approach and we believe in accommodating each client’s specific goals and needs. </p>
+
+        <p>Transparency: We wish to have open conversations with clients about the plan of action we wish to take along with keeping them in the loop on any major decisions as it pertains to asset management. </p>
+
+        <p> Ethical Investing: We wish to comprise any portfolio with companies creating positive impacts on society, rather than ones that profit off of individuals in an immoral way. </p>
+    </div> 
+</div> -->
+<h1>RANDOM ASS TEXT INSERTED HERE</h1>
+<img class = "mainimg" src="{% static 'images/randomimage.jpg'%}">
+
+
+{% endblock%}
+
+{% block content1 %}
+
+
+<div class="content1info">
+    <h1><strong>Our Philosophy</strong></h1>
+    <p><strong>We invest in businesses led by people we believe in.</strong></p>
+    <p>We believe in supporting talented people who demonstrate advanced sector expertise, pioneering thinking and a value set that aligns with our own.</p>
+    <p>Our slogan Partnership Investing speaks to our tradition of working hand-in-hand with the leaders of our investment businesses in a shared pursuit for greater value for all Capricorn stakeholders.</p>
+    <p>We insist that our family values of honesty, integrity and humility underpin every interaction that represents our organisation as a whole.</p>
+</div>
+
+{% endblock %}
+
+{% block content2 %}
+    <img class = "content2img" src="{% static 'images/newimage.jpg'%}">
+{% endblock %}
+
+{% block test %}
+<h1>Core Values</h1>
+<section id="sec">
+
+    <ul>
+      <li>
+        <span class="fa fa-flag"></span>
+  
+        <h3>Independence</h3>
+        <p>Without direct links to any unaffiliated outside group, we eliminate institutionalized conflicts of interest and pressures.</p>
+      </li>
+      <li><span class="fa fa-users"></span>
+        <h3>Client Focus</h3>
+        <p>We understand each client is different and believe in personalization for each one. We believe in a long-term approach and we believe in accommodating each client’s specific goals and needs. </p>
+      </li>
+      <li><span class="fa fa-handshake"></span>
+        <h3>Transparency</h3>
+        <p>We wish to have open conversations with clients about the plan of action we wish to take along with keeping them in the loop on any major decisions as it pertains to asset management. </p>
+    </li>
+    <li><span class="fa fa-balance-scale"></span>
+        <h3>Ethical Investing</h3>
+        <p>We wish to comprise any portfolio with companies creating positive impacts on society, rather than ones that profit off of individuals in an immoral way. </p>
+    </li>
+  
+    </ul>
+  </section>
+{% endblock %}
