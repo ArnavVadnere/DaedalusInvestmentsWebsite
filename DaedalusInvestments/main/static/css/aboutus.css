@@ -1,167 +1,406 @@
-* {
-    color: black;
+.container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.aboutuspage{
-    padding-left: 12%;
-    padding-right:12%;
-    color: black;
-    font-size: 14px;
-    line-height: 2;
+.history,
+.whatwedo,
+.philosophy,
+.corevalues,
+.whatwedoimg,
+.philosophyimg,
+.ourinvestments {
+  flex: wrap;
+  /* border: 1px solid black;
+  margin: 0.5em;
+  padding: 0.5em; */
+  text-align: left;
 }
-#about1 img{
-  width:100%;
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
   object-fit: cover;
 }
-
-#about2 {
-    background-color: rgba(102, 102, 102, 0.609);
+.whatwedo,
+.whatwedoimg {
+  flex-basis: 40%;
+  flex-direction: row;
+  flex-grow: 1;
 }
 
-.about2info {
-    padding-top: 10%;
-    padding-bottom: 1%;
-    padding-left: 5%;
-    padding-right: 5%;;
+.philosophyimg,
+.philosophy {
+  flex-basis: 40%;
+  flex-direction: row;
+  flex-grow: 1;
 }
 
-.about2info h1 {
-    font-family: 'jel',Helvetica,Arial,Lucida,sans-serif;
-    font-size: 32px;
-    color: #004F44!important;
-    line-height: 1.6em;
-}
-.about2info p {
-    padding-bottom: 1em;
-}
-
-.mainimg {
-    height: 460px;
-    width:100%;
-    object-fit: cover;
+.whatwedo,
+.philosophy {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f6f6;
 }
 
-#Main h1{
-    z-index:1;
-    position: absolute;
-    text-align: center;
-    right: 0;
-    left:0; 
+.whatwedo,
+.philosophy,
+.history {
+  padding: 0 5%;
+}
+
+.whatwedo h2,
+.philosophy h2,
+.corevalues h2 {
+  align-items: center;
+  justify-content: center;
+  font-family: "jel", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 32px;
+  /* color: #004f44 !important; */
+  line-height: 3em;
+  text-align: center;
+}
+.history h2 {
+  padding: 2% 0;
+}
+
+.history h2,
+.whatwedo h1,
+.philosophy h2,
+.corevalues h2,
+.ourinvestments h1 {
+  color: #001736;
+}
+
+.ourinvestments {
+  padding-top: 5%;
+}
+
+.history {
+  padding-bottom: 5%;
+}
+
+@media screen and (max-width: 992px) {
+  .container > * {
+    /* flex: 50%; */
   }
-
-
-#content2 img{
-  width:100%;
-  object-fit: cover;
-}
-.content2img {
-    /* width: 100%; */
 }
 
-#content1 {
-    background-color: rgba(102, 102, 102, 0.609);
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  main {
+    order: 1;
+  }
+  .history {
+    order: 2;
+  }
+  .whatwedoimg {
+    order: 3;
+  }
+  .whatwedo {
+    order: 4;
+  }
+  .philosophyimg {
+    order: 5;
+  }
+  .philosophy {
+    order: 6;
+  }
+  .ourinvestments {
+    order: 7;
+  }
+  .corevalues {
+    order: 8;
+  }
+  .footer {
+    order: 9;
+  }
 }
 
-.content1info {
-    padding-top: 10%;
-    padding-bottom: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
+/**************** CORE VALUES *************/
+.corevalues {
+  /* display: flex;
+  flex: wrap; */
+  justify-content: space-between;
+  /* flex-direction: row; */
 }
-
-.content1info h1 {
-    font-family: 'jel',Helvetica,Arial,Lucida,sans-serif;
-    font-size: 32px;
-    color: #004F44!important;
-    line-height: 1.6em;
-}
-.content1info p {
-    padding-bottom: 1em;
-}
-
-#test h1{
-    color: #555;
-    font-weight: 400;
-    font-size: 40px;
-}
-
-
-/* cards */
-
-
 #sec {
-    font-family: "Raleway", sans-serif;
-    padding: 50px 0;
-    background: #fff;
-    text-align: center;
-    word-wrap: break-word;
+  font-family: "Raleway", sans-serif;
+  /* padding: 50px 0; */
+  background: #fff;
+  text-align: center;
+  word-wrap: break-word;
+}
+#sec h2 {
+  font-weight: 400;
+  font-size: 40px;
+  color: #001736;
+}
+#sec ul {
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  height: 50%;
+}
+#sec ul li {
+  padding: 40px;
+  width: 300px;
+  transition: box-shadow 0.3s;
+}
+#sec ul li:hover {
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+#sec ul li:hover span {
+  color: #001736;
+}
+#sec ul li:hover p {
+  color: #555;
+}
+#sec ul li:hover h3 {
+  color: #001736;
+}
+#sec ul li:hover h3:after {
+  width: 25px;
+}
+#sec ul li span {
+  font-size: 2.6em;
+  display: block;
+  transition: color 0.3s;
+  color: #a2a2a2;
+}
+#sec ul li span:before,
+#sec ul li span:after {
+  position: static;
+}
+#sec ul li h3 {
+  color: #6f6f6f;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 100;
+  transition: color 0.3s;
+}
+/* #sec ul li h3:after {
+  content: "";
+  position: relative;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #6f6f6f;
+  transition: width 0.3s;
+} */
+#sec ul li p {
+  color: #a2a2a2;
+  text-align: left;
+  text-indent: 1em;
+  font-size: 16px;
+  line-height: 26px;
+  transition: color 0.3s;
+}
+
+/**************** Our Investments *******************/
+/* .ourinvestments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  
+
+
+}
+
+.ourinvestments img {
+  max-width: 1500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.info {
+  padding-left: 10%;
+  display: flex;
+  background-color: blanchedalmond;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 10px;
+  /* margin-top: -150px; */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat";
+}
+section {
+  /* height: 50%; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #1e1f26; */
+}
+.cont {
+  flex-direction: column;
+  width: 100%;
+  margin: 0 20px;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: aqua; */
+}
+.left {
+  width: 100%;
+  height: 400px;
+
+  background: url(https://i.ibb.co/J3G6W6b/pexels-photo-669996.jpg)
+    no-repeat center / cover;
+  border-radius: 12px;
+}
+.right {
+  width: 90%;
+  margin: 0;
+  margin-top: -100px;
+  min-height: 400px;
+  background-color: #f6f6f6;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 8px;
+  color: black;
+}
+.right h1 {
+  font-size: 40px;
+  font-weight: lighter;
+  padding: 5%;
+}
+
+.right a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: white;
+  color: black;
+  padding: 20px 30px;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+.right {
+  justify-content: left;
+  line-height: 1.6rem;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.right h3 {
+  padding-top: 5%;
+}
+
+.col1,
+.col2 {
+  flex-basis: 40%;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.col1 {
+  float: left;
+  padding-left: 10%;
+  max-width: 500px;
+}
+
+.col2 {
+  float: right;
+  padding-right: 10%;
+}
+
+.right p {
+  margin: 2% 0;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+@media screen and (max-width: 1017px) {
+  .col1,
+  .col2 {
+    padding: 0%;
+    float: none;
   }
-  #sec h2 {
-    font-weight: 400;
-    font-size: 40px;
-    color: #63b7e6;
+  .right h3 {
+    padding-top: 7%;
   }
-  #sec ul {
+}
+
+@media only screen and (max-width: 768px) {
+  .cont {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 20px;
+  }
+  .left {
+    width: 100%;
+    height: 400px;
+  }
+  .right {
+    width: 90%;
     margin: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    list-style: none;
-    height: 50%;
+    margin-top: -100px;
   }
-  #sec ul li {
-    padding: 40px;
-    width: 300px;
-    transition: box-shadow 0.3s;
+}
+
+@media screen and (max-width: 992px) {
+  .container > * {
+    flex: 50%;
   }
-  #sec ul li:hover {
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
   }
-  #sec ul li:hover span {
-    color: #63b7e6;
+
+  .main {
+    order: 1;
   }
-  #sec ul li:hover p {
-    color: #555;
+  .history {
+    order: 2;
   }
-  #sec ul li:hover h3 {
-    color: #63b7e6;
+  .philosophyimg {
+    order: 3;
   }
-  #sec ul li:hover h3:after {
-    width: 25px;
+  .philosophy {
+    order: 4;
   }
-  #sec ul li span {
-    font-size: 2.6em;
-    display: block;
-    transition: color 0.3s;
-    color: #a2a2a2;
+  .ourinvestments {
+    order: 5;
   }
-  #sec ul li span:before, #sec ul li span:after {
-    position: static;
+  .corevalues {
+    order: 6;
   }
-  #sec ul li h3 {
-    color: #6f6f6f;
-    display: inline-block;
-    font-size: 24px;
-    font-weight: 100;
-    transition: color 0.3s;
+  .footer {
+    order: 7;
   }
-  /* #sec ul li h3:after {
-    content: "";
-    position: relative;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
-    display: block;
-    width: 40px;
-    height: 1px;
-    background: #6f6f6f;
-    transition: width 0.3s;
-  } */
-  #sec ul li p {
-    color: #a2a2a2;
-    text-align: left;
-    text-indent: 1em;
-    font-size: 16px;
-    line-height: 26px;
-    transition: color 0.3s;
-  }
+}

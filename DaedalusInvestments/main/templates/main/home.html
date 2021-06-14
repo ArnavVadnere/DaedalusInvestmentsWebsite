@@ -1,129 +1,125 @@
-{% extends 'main/base.html' %}
-{% load static %}
+{% extends 'main/base.html' %} {% load static %} {% block scripts %}
+<link href="{% static 'css/home.css'%}" rel="stylesheet" type="text/css" />
+{% endblock %} {% block video %}
+<video src="{% static 'videos/homepage.mp4'%}" muted loop autoplay></video>
+{% endblock%} {% block videoname %}
+<h1>DAEDALUS</h1>
+<h1>INVESTMENTS</h1>
+<p>"Giving Wings to Your Money"</p>
+{% endblock%} {% block content %}
 
-{% block main %}
-<div class="assets_under">
-    <img class="assets_under_img" src="{% static 'images/hand.png'%}" alt="Assets Under Managment Image">
-    
+<div class="about2">
+  <img class="about1img" src="{% static 'images/HOMEPAGEABBOUTUS.jpg'%}" />
+</div>
+
+<div class="about1">
+  <h2>About Us</h2>
+  <p>
+    Daedalus Investments Co. is a portfolio management entity that offers
+    personalized asset management and portfolio consultation to all clients and
+    offers complete and thorough transparency. From portfolio allocation to
+    equity valuation, our comprehensive strategy is streamlined, efficient, and
+    creates sustainable growth in capital markets.
+  </p>
+  <a href="/aboutus" class="button" title="Yes, turtles.">About us</a>
+</div>
+
+<div class="counter">
+  <div class="assets_under">
+    <img
+      class="assets_under_img"
+      src="{% static 'images/hand.png'%}"
+      alt="Assets Under Managment Image"
+    />
+
     <div id="numbers">
       <span class="fig-number">301420</span>
     </div>
     <p>Assets Under Management</p>
-    
-</div>
-
-
-
-{% endblock%}
-
-{% block video %}
-  <video src="{% static 'videos/homepage.mp4'%}" muted loop autoplay></video>
-{% endblock%}
-
-{% block videoname %}
-<h1>DAEDALUS 
-  INVESTMENTS</h1>
-  <p>"Giving Wings to Your Money"</p>
-
-{% endblock%}
-
-
-{% block about1 %}
-<div class="aboutcontent">
-  <div class="abouttext">
-    <h3>ABOUT US</h3>
-    <p>Daedalus Investments Co. is a portfolio management entity that offers personalized asset management and portfolio consultation to all clients and offers complete and thorough transparency. From portfolio allocation to equity valuation, our comprehensive strategy is streamlined, efficient, and creates sustainable growth in capital markets. </p>
-    <a href='/aboutus' class='button' title='Yes, turtles.' >About us</a>
   </div>
 </div>
-{% endblock%}
 
-
-
-{% block about2 %}
-<img class="blackimage" src="{% static 'images/newimage.jpg'%}" alt="black image">
-
-{% endblock%}
-
-{% block content1%}
-<div class="card1" >
-  <div class="grid__item" style="float:right;">
-      <div class="card"><img class="card__img" src="{% static 'images/strat.jpg'%}" alt="Snowy Mountains">
-        <div class="card__content">
-          <h1 class="card__header">Investment Strategy</h1>
-          <p class="card__text">Get a comprehensive look into our investment process </p>
-          <div class="thing" style="float:bottom;">
-            <a href='/aboutus' class='button' title='Yes, turtles.' >About us</a>
+<div class="test">
+  <div class="gtco-testimonials">
+    <div class="owl-carousel owl-carousel1 owl-theme">
+      <div>
+        <div class="card text-center">
+          <!-- <img
+            class="card-img-top"
+            src="https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300"
+            alt=""
+          /> -->
+          <div class="card-body">
+            <h5>Raj V. <br /></h5>
+            <p class="card-text">
+              “I have been investing with Sanjay since 2018 and can safely say
+              that he has an eye for value. Picking stocks like Tanger Outlets
+              and Cinemark before they returned 100+% over the course of a few
+              months, he has consistently proven his method is no trivial
+              achievement. I will definitely be working more closely with him
+              and wish him the best of luck in the future!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card text-center">
+          <!-- <img
+            class="card-img-top"
+            src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301"
+            alt=""
+          /> -->
+          <div class="card-body">
+            <h5>Ali M.<br /></h5>
+            <p class="card-text">
+              “Happy with what has been done. A lot of thought has gone into the
+              process and the company itself. The securities that were invested
+              in by Daedalus are stable and they make use of option contracts
+              well as a hedge. Very informative company plus great minds at work
+              here. ”
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card text-center">
+          <!-- <img
+            class="card-img-top"
+            src="https://images.unsplash.com/photo-1575377222312-dd1a63a51638?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=302&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=302"
+            alt=""
+          /> -->
+          <div class="card-body">
+            <h5>Samuel K.<br /></h5>
+            <p class="card-text">
+              “The thing I like most about Daedalus is their transparency. They
+              don't have a plethora of clients (yet), so they devote individual
+              time to each person and really hold up their end when it comes to
+              transparency being personable. I think my money's in a safe place
+              and I don't have any complaints.”
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card text-center">
+          <!-- <img
+            class="card-img-top"
+            src="https://images.unsplash.com/photo-1549836938-d278c5d46d20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=303"
+            alt=""
+          /> -->
+          <div class="card-body">
+            <h5>Chirag R.<br /></h5>
+            <p class="card-text">
+              “Very good, calculated investment decisions. Overall pleased with
+              my experience and not much more I can ask for. Returns have been
+              consistent with or above market returns so it's my assumption what
+              Daedalus is doing works quite well.”
+            </p>
           </div>
         </div>
       </div>
     </div>
-</div>
-{% endblock %}
-
-{% block content2%}
-<div class="card2">
-  <div class="grid__item">
-      <div class="card"><img class="card__img" src="{% static 'images/education.jpg'%}" alt="Snowy Mountains">
-        <div class="card__content">
-          <h1 class="card__header">Education</h1>
-          <p class="card__text">ARM YOURSELF WITH THE TOOLS TO NAVIGATE THE FINANCIAL MARKETS</p>
-          
-          <a href='/aboutus' class='button' title='Yes, turtles.' >About us</a>
-        
-        </div>
-      </div>
-    </div>
-</div>
-{% endblock %}
-
-
-
-{% block test%}
-<!-- <div class='content'>
-  <div class='slider single-item'>
-    <div class='quote-container'>
-      <div class='portrait octogon'>
-        <img alt='' src='http://www.tuacahntech.com/uploads/6/1/7/9/6179841/6166205_orig.jpg'>
-      </div>
-      <div class='quote'>
-        <blockquote>
-          <p>Meditation shabby chic master cleanse banh mi Godard. Asymmetrical Wes Anderson Intelligentsia you probably haven't heard of them.</p>
-          <cite>
-            <span>Kristi McSweeney</span>
-            <br>
-            Thundercats twee
-            <br>
-            Austin selvage beard
-          </cite>
-        </blockquote>
-      </div>
-    </div>
-    <div class='quote-container'>
-      <div class='portrait octogon'>
-        <img alt='' src='http://static1.squarespace.com/static/51579fb2e4b0fc0d9469ff97/56cc83dfe707ebc39cf3269f/56d0b59e27d4bde4665fded3/1457365822199/'>
-      </div>
-      <div class='quote'>
-        <blockquote>
-          <p>Bespoke occupy cred seitan. Austin street art freegan Truffaut leggings aesthetic, salvia chia Brooklyn flexitarian. Single-origin coffee before they sold out health goth, cornhole irony keffiyeh Austin taxidermy mlkshk blog trust fund banh mi you probably haven't heard of them.</p>
-          <cite>
-            <span>Dina Anderson</span>
-            <br>
-            Blue Bottle keffiyeh
-            <br>
-            Sartorial locavore Schlitz ennui
-          </cite>
-        </blockquote>
-      </div>
-    </div>
   </div>
 </div>
-<svg>
-  <defs>
-    <clipPath clipPathUnits='objectBoundingBox' id='octogon'>
-      <polygon points='0.50001 0.00000, 0.61887 0.06700, 0.75011 0.06721, 0.81942 0.18444, 0.93300 0.25001, 0.93441 0.38641, 1.00000 0.49999, 0.93300 0.61887, 0.93300 0.75002, 0.81556 0.81944, 0.74999 0.93302, 0.61357 0.93444, 0.50001 1.00000, 0.38118 0.93302, 0.24998 0.93302, 0.18056 0.81556, 0.06700 0.74899, 0.06559 0.61359, 0.00000 0.49999, 0.06700 0.38111, 0.06700 0.25001, 0.18440 0.18058, 0.25043 0.06700, 0.38641 0.06559, 0.50001 0.00000'></polygon>
-    </clipPath>
-  </defs>
-</svg> -->
 
 {% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'main/base.html' %} {% load static %} {% block scripts %}
+<link href="{% static 'css/education.css'%}" rel="stylesheet" type="text/css" />
+{% endblock %} {% block video %}
+<video src="{% static 'videos/homepage.mp4'%}" muted loop autoplay></video>
+{% endblock%} {% block videoname %}
+<h1>Teaching Investing Principles in a Straightforward, Easy-to-Use Manner</h1>
+
+{% endblock%} {% block content %}
+
+<div class="div1">
+  <h1>The Power of Investing</h1>
+  <p>
+    We strongly believe in the art of investing and wish to help anyone get
+    started. Time horizon is one of the most important factors that can multiply
+    your money exponentially. Getting started early is extremely important and
+    can be one of the best steps anyone can take to secure their financial
+    future. Here is an infographic that illustrates just how powerful time can
+    be.
+  </p>
+  <p>
+    <br>
+    By starting early, you automatically have an advantage. At Daedalus
+    Investments, we don’t believe that investing is an exclusive art. Retail
+    trading has increased to as much as 20% of all trading on the U.S. equity
+    market and it is easier than ever to start investing. This course presents
+    all the information needed for anyone to figure out what type of investor
+    they are, plus the tools needed to get familiarized with each investing
+    style. This course is meant to provide a stepping stone into potentially
+    more education for those who wish and hopefully will kickstart anyone’s
+    journey with investing!
+  </p>
+</div>
+
+<div class="div2">
+  <h2>Course Description</h2>
+  <p>
+    Investing 101 is suitable for anyone who has a keen interest in learning
+    more about trading the financial markets. Whether you are a complete
+    beginner or a seasoned trader, our courses and trading education materials
+    offer an experience we hope will be beneficial for anyone willing to
+    partake. Our videos are straightforward and give you the opportunity to
+    learn to trade through methodical processes and will serve as the perfect
+    introduction to being able to navigate the complex world of equities.
+    Disclaimer: All costs go towards maintaining the domain and does not serve
+    as direct profit for Daedalus Investments.
+  </p>
+</div>
+
+
+  <div class="wrap1">
+    <div class="wrap">
+       <div class="tile">
+          <a href="{% static 'pdf/Paper.pdf'%}" class="text-reset" target="_blank">
+             <img src="{% static 'images/stratcard.jpg'%}">
+             <div class="text">
+                <h1>Investing 101</h1>
+                <h2 class="animate-text">Click here to view our investment strategy</h2>
+                <div class="dots">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                </div>
+             </div>
+          </a>
+       </div>
+    </div>
+</div>
+{% endblock %}

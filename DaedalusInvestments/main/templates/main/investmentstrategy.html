@@ -1,67 +1,104 @@
-{% extends 'main/base.html' %}
-{% load static %}
-
-
-{% block video %}
-<video src="{% static 'videos/investmentstrat.mp4'%}" muted loop autoplay></video>
-{% endblock%}
-
-{% block videoname %}
-<h1>INVESTMENT STRATEGY</h1>
-{% endblock%}
-
-{% block main %}
+{% extends 'main/base.html' %} {% load static %} {% block scripts %}
+<link
+  href="{% static 'css/investmentstrategy.css'%}"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block video %}
+<video
+  src="{% static 'videos/investmentstrat.mp4'%}"
+  muted
+  loop
+  autoplay
+></video>
+{% endblock%} {% block videoname %}
+<h1>Targeting long-term growth by finding value in every market opportunity</h1>
+{% endblock%} {% block content %}
 <div class="strat">
-    <h1>Planning</h1>
-    <p>First, we will speak to our clients to see if they have any specific values or other criteria that may need to be met while choosing stocks, we will assess their risk tolerance and establish a stop-loss level for the whole account. From here, stocks that have dipped their 52-week high are narrowed while further performing some initial screening processes to determine a small basket of stocks. This basket is fed into our original algorithm that accounts sentiment in combination with heavy stochastic indicators to extrapolate the price of a security in the future. By training the model on a data set, and modifying it depending on today’s sentiment gathered from multiple sources (Twitter, StockTwits, r/wallstreetbets), an accurate representation of the stock’s future prospects can be seen. From here, heavy fundamental analysis is conducted to assess the companies’ financial strength, profitability metrics, and price valuation. As a last step, technical analysis is conducted to determine a good entry and exit point for the stock. </p>
+  <h1>Investment Objective</h1>
+  <p>
+    We aim to achieve sustainable growth in equity markets through our unique
+    approach to investing. Our process is hinged upon investing principles that
+    have stood the test of time in combination with new technologies leveraging
+    machine learning, big data, and algorithmic trading so we stay at the
+    forefront of innovation and adaptiveness.
+  </p>
 </div>
 
-<div class="cardheading">
-    <h1>Learn More</h1>
+<div class="approachimg">
+  <img class="content2img" src="{% static 'images/INVESTMENTSTRATEGY.jpeg'%}" />
 </div>
 
-{% endblock%}
+<div class="approach">
+  <h2>Our Investment Approach</h2>
+  <p>
+    We invest across multitudes of different industries wherever we find value.
+    We target companies with a strong history of cash flow, excellent
+    profitability sustenance, stable balance sheets, and strong prospects for
+    growth. By familiarizing ourselves with the business itself as if we were
+    employees, we go beyond the realms of fundamental and technical analysis and
+    invest in business we truly believe in. Our strategy at a glances leverages:
+  </p>
+  <ul>
+    <li>Intensive due diligence</li>
+    <li>Extensive public sentiment readings</li>
+    <li>Heavy stochastic usage</li>
+    <li>Active portfolio management</li>
+    <li>Investment in derivatives for hedging and/or leveraged risk</li>
+  </ul>
+</div>
 
-{% block content1 %}
-<div class="wrap1"> 
-<div class="wrap"> 
-    
-    <div class="tile"> 
-        <a href="{% static 'pdf/Paper.pdf'%}" class="text-reset" target="_blank">
-        <img src="{% static 'images/stratcard.jpg'%}">
-        <div class="text">
-        <h1>In-depth Investment Strategy</h1>
-        <h2 class="animate-text">Click here to view our investment strategy</h2>
-      <div class="dots">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        </div>
-    </a>
-       </div>   
-    </div>  
-    </div>
-{% endblock %}
+<div class="process">
+  <h2>Investment Process</h2>
+  <p>
+   First, we will speak to our clients to see if they have any specific values or other criteria that may need to be met while choosing stocks. First we do an initial stock screening, then we will then train the model on a data set, modifying it depending on today’s sentiment gathered from multiple sources (Twitter, StockTwits, r/wallstreetbets). With this, an accurate representation of the stock’s future prospects can be seen. From here, heavy fundamental analysis is conducted to assess the companies’ financial strength, profitability, and valuation. 
+  </p>
+</div>
 
-{% block content2 %}
+<div class="processimg">
+  <img class="about1img" src="{% static 'images/OURPROCESS.jpg'%}" />
+</div>
+
+<div class="learn">
+   <h2>Learn More About Our Process</h2>
+</div>
+
+<div class="wrap1">
+   <div class="wrap">
+      <div class="tile">
+         <a href="{% static 'pdf/Paper.pdf'%}" class="text-reset" target="_blank">
+            <img src="{% static 'images/stratcard.jpg'%}">
+            <div class="text">
+               <h1>In-depth Investment Strategy</h1>
+               <h2 class="animate-text">Click here to view our investment strategy</h2>
+               <div class="dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+            </div>
+         </a>
+      </div>
+   </div>
+</div>
 <div class="wrap2" >
-<div class="wrap">  
-    
-    <div class="tile"> 
-        <a href="{% static 'pdf/Daedalus_Capital_Plan_Client_Report_1.pdf'%}" class="text-reset" target="_blank">
-        <img src="{% static 'images/client.jpg'%}">
-        <div class="text">
-        <h1>Client Report</h1>
-        <h2 class="animate-text">Click here to view our client report</h2>
-      <div class="dots">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        </div>
-       </div>  
-    </div> 
-    </a>  
-    </div>
+   <div class="wrap">
+      <div class="tile">
+         <a href="{% static 'pdf/Daedalus_Capital_Plan_Client_Report_1.pdf'%}" class="text-reset" target="_blank">
+            <img src="{% static 'images/client.jpg'%}">
+            <div class="text">
+               <h1>Client Report</h1>
+               <h2 class="animate-text">Click here to view our client report</h2>
+               <div class="dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+            </div>
+      </div>
+   </div>
+   </a>  
+</div>
+
+
 {% endblock %}

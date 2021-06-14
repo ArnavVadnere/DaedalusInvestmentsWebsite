@@ -11,3 +11,6 @@ def aboutus(response):
 
 def investmentstrategy(response):
     return render(response, "main/investmentstrategy.html")
+
+def education(response):
+    return render(response, "main/education.html")
