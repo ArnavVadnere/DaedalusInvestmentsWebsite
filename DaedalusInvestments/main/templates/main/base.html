@@ -16,11 +16,6 @@
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 
-    <link
-      rel="icon"
-      href="{% static 'images/image0 (2) (Custom).png'%}"
-      type="image/png"
-    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <link
@@ -28,10 +23,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    {% block scripts %}
-   
-
-    {% endblock %}
+    {% block scripts %} {% endblock %}
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -53,37 +45,32 @@
     <div class="container">
       <main>
         <nav>
-          <a href="/">Home</a>
-          <a href="/investmentstrategy">Investment Strategy</a>
-          <a href="/aboutus">About Us</a>
-          <a href="/education">education</a>
+          <div class="logo">
+            <img
+              src="https://i.ibb.co/1zmmdVP/Sanjay-Logo-Side-Trans.png"
+              alt="Logo Image"
+            />
+          </div>
+          <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-links">
+            <a href="/">Home</a>
+            <a href="/investmentstrategy">Investment Strategy</a>
+            <a href="/aboutus">About Us</a>
+            <a href="/education">education</a>
+          </ul>
         </nav>
-        <div>
-          <img
-            class="LogoHeader"
-            src="{% static 'images/SanjayLogoSideTrans.png'%}"
-            alt="Logo"
-          />
-        </div>
 
         <div class="video">
-          {% block video %}
-          
-          {% endblock%}
+          {% block video %} {% endblock%}
 
-          <div class="videoname">
-            {% block videoname %}
-            
-            {% endblock%}
-  
-          </div>
+          <div class="videoname">{% block videoname %} {% endblock%}</div>
         </div>
       </main>
-      {% block content %}
-
-
-
-      {% endblock %}
+      {% block content %} {% endblock %}
       <!-- Footer -->
       <footer class="footer">
         <div class="footer-left col-md-4 col-sm-6">
@@ -104,16 +91,14 @@
               target="_blank"
               ><i class="fab fa-linkedin"></i
             ></a>
-            <a
-              href="https://medium.com/@daedalusinvestments1"
-              target="_blank"
+            <a href="https://medium.com/@daedalusinvestments1" target="_blank"
               ><i class="fab fa-medium"></i
             ></a>
             <a
-            href="https://www.youtube.com/channel/UCK_C0fikkLDalqFaNWnM57g"
-            target="_blank"
-            ><i class="fab fa-youtube"></i
-          ></a>
+              href="https://www.youtube.com/channel/UCK_C0fikkLDalqFaNWnM57g"
+              target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
           </div>
         </div>
         <div class="footer-center col-md-4 col-sm-6">
@@ -131,12 +116,14 @@
           </div>
         </div>
         <div class="footer-right col-md-4 col-sm-6">
-          <img
-            class="footerlogo"
-            src="{% static 'images/SanjayLogoSide.png'%}"
-            alt="Logo"
-            style="width: 35%"
-          />
+          <div class="footerlogo">
+            <img
+              src="https://i.ibb.co/TTcysm9/Sanjay-Logo-Side.png"
+              alt="Logo"
+              style="width: 35%"
+            />
+          </div>
+
           <p class="menu">
             <a
               href="https://sanjay-r-s-school.thinkific.com/"
@@ -201,7 +188,6 @@
     ></script>
     <script src="{% static 'js/home.js'%}"></script>
     <script src="{% static 'js/test.js'%}"></script>
-    
-    
+    <script src="{% static 'js/nav.js'%}"></script>
   </body>
 </html>

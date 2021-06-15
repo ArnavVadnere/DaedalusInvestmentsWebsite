@@ -1,5 +1,4 @@
-// inViewport jQuery plugin
-// https://stackoverflow.com/a/26831113/383904
+
 $(function($, win) {
     $.fn.inViewport = function(cb) {
       return this.each(function(i,el){
@@ -25,7 +24,7 @@ $(function($, win) {
         $(this).prop('Counter',0).animate({
           Counter: $(this).text()
         }, {
-          duration: 1500,
+          duration: 2500,
           step: function (now) {
             $(this).text(Math.ceil(now));
           }

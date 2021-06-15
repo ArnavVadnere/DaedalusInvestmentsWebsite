@@ -1,6 +1,8 @@
 {% extends 'main/base.html' %} {% load static %} {% block scripts %}
 <link href="{% static 'css/education.css'%}" rel="stylesheet" type="text/css" />
-{% endblock %} {% block video %}
+{% endblock %} 
+{% block title %}Education{% endblock %}
+{% block video %}
 <video src="{% static 'videos/homepage.mp4'%}" muted loop autoplay></video>
 {% endblock%} {% block videoname %}
 <h1>Teaching Investing Principles in a Straightforward, Easy-to-Use Manner</h1>
@@ -51,7 +53,7 @@
     <div class="wrap">
        <div class="tile">
           <a href="{% static 'pdf/Paper.pdf'%}" class="text-reset" target="_blank">
-             <img src="{% static 'images/stratcard.jpg'%}">
+             <img src="https://i.ibb.co/HYXCXg3/Hand-moving-pawn-on-a-conceptual-maze-Shortcut-to-success-or-career-guidance-concept-Composite-image.jpg">
              <div class="text">
                 <h1>Investing 101</h1>
                 <h2 class="animate-text">Click here to view our investment strategy</h2>

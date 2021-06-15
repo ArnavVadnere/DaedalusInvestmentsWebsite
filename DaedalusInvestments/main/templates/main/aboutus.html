@@ -1,12 +1,17 @@
 {% extends 'main/base.html' %} {% load static %} {% block scripts %}
 <link href="{% static 'css/aboutus.css'%}" rel="stylesheet" type="text/css" />
-{% endblock %} {% block videoname %}
-<h1>A business with a streamlined process staying true to its roots built upon trust and integrity</h1>
+{% endblock %} 
+{% block title %}About Us{% endblock %}
+{% block videoname %}
+<h1>
+  A business with a streamlined process staying true to its roots built upon
+  trust and integrity
+</h1>
 {% endblock%} {% block video %}
 <video src="{% static 'videos/homepage.mp4'%}" muted loop autoplay></video>
 {% endblock%} {% block content%}
 <div class="history">
-  <h2 style="text-align: center;">Our Mission - “Giving Wings to Your Money”</h2>
+  <h2 style="text-align: center">Our Mission - “Giving Wings to Your Money”</h2>
   <p>
     The story of Daedalus and Icarus is a classic tale of greed, folly, and
     unbridled spirit. Daedalus and Icarus were father and son, trapped on an
@@ -24,8 +29,6 @@
   </p>
 </div>
 
-
-
 <div class="philosophy">
   <h2>Our Take On Ethical Investing</h2>
   <p>
@@ -39,7 +42,7 @@
 </div>
 
 <div class="philosophyimg">
-  <img class="content2img" src="{% static 'images/OURTAKEONETHICAL INVESTING.jpg'%}" />
+  <img src="https://i.ibb.co/gTkNPqv/OURTAKEONETHICAL-INVESTING.jpg" />
 </div>
 
 <div class="ourinvestments">

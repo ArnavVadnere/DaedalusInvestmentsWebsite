@@ -1,5 +1,4 @@
 * {
-
 }
 
 .process,
@@ -27,7 +26,6 @@ img,
 video {
   display: block;
   max-width: 100%;
-  
 }
 .approachimg {
   object-fit: cover;
@@ -90,26 +88,25 @@ video {
   justify-content: center;
   font-family: "jel", Helvetica, Arial, Lucida, sans-serif;
   font-size: 32px;
-  
+
   line-height: 3em;
   text-align: center;
 }
 .process h2,
 .approach h2,
 .strat h1,
-.learn h2{
+.learn h2 {
   color: #001736;
 }
 
 ul {
-  padding-top:4%;
+  padding-top: 4%;
   text-align: left;
   /* list-style-type: none; */
 }
 .learn {
   text-align: center;
 }
-
 
 @media screen and (max-width: 992px) {
   .container > * {
@@ -166,7 +163,6 @@ ul {
 
 .wrap1 p,
 .wrap2 p {
-  
 }
 .wrap1 {
   flex-basis: 40%;
@@ -352,5 +348,15 @@ ul {
   .wrap1,
   .wrap2 {
     justify-content: center;
+  }
+
+  .approach h2,
+  .learn h2 {
+    line-height: 2rem;
+  }
+
+  .approach, .process {
+    padding-bottom: 7%;
+    padding-top: 7%;
   }
 }

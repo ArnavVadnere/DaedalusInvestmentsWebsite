@@ -16,8 +16,9 @@
   flex-grow: 1;
 }
 
-.div1 h1, .div2 h2 {
-  padding:3%;
+.div1 h1,
+.div2 h2 {
+  padding: 3%;
   padding-top: 0;
   color: #001736;
 }
@@ -233,5 +234,10 @@
   .wrap1,
   .wrap2 {
     justify-content: center;
+  }
+  .div1,
+  .div2 {
+    padding-top: 7%;
+    padding-bottom: 7%;
   }
 }
