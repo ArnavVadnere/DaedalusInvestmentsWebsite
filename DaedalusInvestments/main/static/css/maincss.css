@@ -221,7 +221,7 @@ video {
   height: auto;
   vertical-align: middle;
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .videoname {
   display: flex;
