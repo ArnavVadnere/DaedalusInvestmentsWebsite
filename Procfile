@@ -1,1 +1,1 @@
-web: gunicorn DaedalusInvestments.wsgi
+web: gunicorn DaedalusInvestments.wsgi --log-file -
