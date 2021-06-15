@@ -76,6 +76,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'DaedalusInvestments.wsgi.application'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
