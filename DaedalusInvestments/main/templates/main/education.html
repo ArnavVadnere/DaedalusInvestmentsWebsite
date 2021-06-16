@@ -1,17 +1,19 @@
 {% extends 'main/base.html' %} {% load static %} {% block scripts %}
 <link href="{% static 'css/education.css'%}" rel="stylesheet" type="text/css" />
-{% endblock %} 
-{% block title %}Education{% endblock %}
-{% block video %}
-<video src="https://fast.wistia.com/embed/medias/mapr80jkqg.jsonp" muted loop autoplay></video>
-
+{% endblock %} {% block title %}Education{% endblock %} {% block video %}
+<video
+  src="{% static 'videos/Video Footage Of City.mp4'%}"
+  muted
+  loop
+  autoplay
+></video>
 {% endblock%} {% block videoname %}
 <h1>Teaching Investing Principles in a Straightforward, Easy-to-Use Manner</h1>
 
 {% endblock%} {% block content %}
 
 <div class="div1">
-  <h1>The Power of Investing</h1>
+  <h2>The Power of Investing</h2>
   <p>
     We strongly believe in the art of investing and wish to help anyone get
     started. Time horizon is one of the most important factors that can multiply
@@ -20,8 +22,11 @@
     future. Here is an infographic that illustrates just how powerful time can
     be.
   </p>
+  <div class="janesimg">
+    <img src="https://i.ibb.co/YZ2nFTM/The-Power-of-Investing-Line-Chart.png" />
+  </div>
   <p>
-    <br>
+    <br />
     By starting early, you automatically have an advantage. At Daedalus
     Investments, we don’t believe that investing is an exclusive art. Retail
     trading has increased to as much as 20% of all trading on the U.S. equity
@@ -49,23 +54,28 @@
   </p>
 </div>
 
-
-  <div class="wrap1">
-    <div class="wrap">
-       <div class="tile">
-          <a href="https://sanjay-r-s-school.thinkific.com/" class="text-reset" target="_blank">
-             <img src="https://i.ibb.co/YdmZZWS/Uj5-AGHPm-Td-O68jnw-PJwr-IMG-20190908-115121-340.jpg">
-             <div class="text">
-                <!-- <h1>Investing 101</h1> -->
-                <h2 class="animate-text">Click here to view our investment course</h2>
-                <div class="dots">
-                   <span></span>
-                   <span></span>
-                   <span></span>
-                </div>
-             </div>
-          </a>
-       </div>
+<div class="wrap1">
+  <div class="wrap">
+    <div class="tile">
+      <a
+        href="https://sanjay-r-s-school.thinkific.com/"
+        class="text-reset"
+        target="_blank"
+      >
+        <img
+          src="https://i.ibb.co/YdmZZWS/Uj5-AGHPm-Td-O68jnw-PJwr-IMG-20190908-115121-340.jpg"
+        />
+        <div class="text">
+          <!-- <h1>Investing 101</h1> -->
+          <h2 class="animate-text">Click here to view our investment course</h2>
+          <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </a>
     </div>
+  </div>
 </div>
 {% endblock %}

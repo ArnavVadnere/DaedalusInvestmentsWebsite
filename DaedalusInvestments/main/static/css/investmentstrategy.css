@@ -31,20 +31,38 @@ video {
   object-fit: cover;
 }
 .strat {
+  display: flex;
+  /* flex-direction: row; */
   color: black;
-  text-align: center;
+  /* text-align: center; */
+  
 }
-.strat h1 {
-  padding-top: 2%;
+
+.heading {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 7%;
+  padding-right: 7%;
+  font-size:1.5rem;
 }
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 7%;
+  font-size:1rem;
+}
+
 .strat p {
-  padding-top: 2%;
-  padding-bottom: 2%;
-  padding-left: 12%;
-  padding-right: 12%;
+  
+  
   color: black;
-  font-size: 14px;
-  line-height: 2;
+}
+
+.strat p, .approach p, .process p {
+  text-align: left;
+  font-size: var(--common-sizep);
+  line-height: var(--common-h);
 }
 
 .process,
@@ -54,9 +72,12 @@ video {
   flex-grow: 1;
 }
 .process {
-  text-align: center;
   padding-left: 7%;
   padding-right: 7%;
+}
+
+.process h2 {
+  padding: 4% 0;
 }
 
 .approachimg,
@@ -66,7 +87,6 @@ video {
   flex-grow: 1;
 }
 .approach p {
-  text-align: center;
 }
 .approach {
   padding-left: 7%;
@@ -79,22 +99,25 @@ video {
   align-items: center;
   justify-content: center;
   background-color: #f6f6f6;
+  padding-bottom: 3%;
 }
 
+.strat h2,
 .process h2,
 .approach h2,
 .learn h2 {
   align-items: center;
   justify-content: center;
   font-family: "jel", Helvetica, Arial, Lucida, sans-serif;
-  font-size: 32px;
-
-  line-height: 3em;
+  
+  font-size: var(--common-sizeh);
+  /* line-height: 3em; */
   text-align: center;
+  padding: 4% 0;
 }
 .process h2,
 .approach h2,
-.strat h1,
+.strat h2,
 .learn h2 {
   color: #001736;
 }
@@ -358,5 +381,18 @@ ul {
   .approach, .process {
     padding-bottom: 7%;
     padding-top: 7%;
+  }
+
+  .heading {
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+  .strat {
+    flex-direction: column;
+  }
+  .text {
+    padding-left: 5%;
+    padding-top: 0%;
+    padding-bottom: 5%;
   }
 }

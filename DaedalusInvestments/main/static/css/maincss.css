@@ -11,10 +11,17 @@
 :root {
   --main-radius: 5px;
   --main-padding: 5px;
+  --common-sizep: 1.2em;
+  --common-sizeh: 2.9em;
+  --common-h: 2em;
 }
-p {
-  line-height: 2rem;
+
+h1, h2, h3 {
+  font-weight: normal;
 }
+
+
+
 
 /* *****************************Nav************************ */
 nav {
@@ -252,8 +259,9 @@ video {
 .videoname p {
   font-family: "Oswald", sans-serif;
   font-weight: 5;
-  color: rgb(143, 142, 142);
-  font-size: 2vh;
+  color: rgb(226, 225, 225);
+
+  font-size: 1vw;
 }
 
 .video {
@@ -442,5 +450,13 @@ footer {
   }
   .footer .footer-center i {
     margin-left: 0;
+  }
+
+  .videoname h1 { 
+    font-size: 25px
+  }
+
+  .videoname p {
+    font-size: 10px;
   }
 }

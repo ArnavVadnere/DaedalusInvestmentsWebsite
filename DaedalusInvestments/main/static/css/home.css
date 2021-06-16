@@ -47,16 +47,31 @@ video {
   justify-content: center;
   background-color: #f6f6f6;
   padding: 0 5%;
+ 
+}
+
+.about1 p {
+  font-size: var(--common-sizep);
+  line-height: var(--common-h);
+  padding-bottom: 8%;
+}
+
+.about1 a {
+  display: flex;
+  /* align-self: flex-end; */
+  
 }
 
 .about1 h2 {
   align-items: center;
   justify-content: center;
   font-family: "jel", Helvetica, Arial, Lucida, sans-serif;
-  font-size: 32px;
+  font-size: var(--common-sizeh);
   /* color: #004f44 !important; */
-  line-height: 3em;
+  
+  /* line-height: 2em; */
   text-align: center;
+  padding: 4% 0;
 }
 
 .content1,
@@ -178,7 +193,7 @@ video {
 .assets_under span {
   text-align: center;
   color: #666;
-  font-size: 45px;
+  font-size: 3.5em;
   top: 10%;
   display: block;
   margin-left: auto;
@@ -188,7 +203,7 @@ video {
   align-items: center;
   color: rgb(0, 0, 0);
   font: arial;
-  font-size: 20px;
+  font-size: 1.5em;
   padding-bottom: 5%;
   display: block;
   margin-left: auto;
@@ -319,7 +334,7 @@ body {
   color: #666666;
 }
 .gtco-testimonials .card p {
-  font-size: 18px;
+  font-size: var(--common-sizep);
   color: #555;
   padding-bottom: 15px;
 }
